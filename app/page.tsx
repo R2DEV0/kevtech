@@ -1,33 +1,25 @@
-"use client"
-import React, { useState } from 'react';
-import Landing from './views/landing';
-import Profile from './views/profile';
-import Resume from './views/resume';
-import Projects from './views/projects';
-import Contact from './views/contact';
-import Resources from './views/resources';
+// pages/home.tsx
+"use client";
+import React, { useState, FC } from 'react';
+import { views } from './components/views';
+import Header from './components/header';
 
-export default function Home() {
-  
-  const [view, setView] = useState({
-    landing: true, 
-    profile: false,
-    resume: false,
-    projects: false,
-    contact: false,
-    resources: false
-  });
-  console.log("")
-  
+const Home: FC = () => {
+  const [view, setView] = useState<number>(0);
+  const CurrentView = views[view];
+
   return (
     <main className="flex min-h-screen flex-col">
-      { 
-        view.profile ? <Profile /> :
-        view.resume ? <Resume /> :
-        view.projects ? <Projects /> :
-        view.contact ? <Contact /> :
-        view.resources ? <Resources /> : <Landing />
-      }
+      <div className="overlay"></div>
+      <div className="scanline"></div>
+      <div className="wrapper">
+        <div className="content clearfix">
+          <Header view={view} setView={setView} />
+          <CurrentView view={view} setView={setView} />
+        </div>
+      </div>
     </main>
   );
-}
+};
+
+export default Home;

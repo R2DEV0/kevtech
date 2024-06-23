@@ -1,52 +1,39 @@
-import React from 'react'
+import React, { FC } from 'react';
+import { ViewProps } from '../types/types';
+import { TypeAnimation } from 'react-type-animation';
 
-const Landing = () => {
+const Landing: FC<ViewProps> = ({ view, setView }) => {
     return(
-        <div>
-          <div className="overlay"></div>
-          <div className="scanline"></div>
-
-          <div className="wrapper">
-            <div className="content clearfix">
-              <header className="site clearfix">
-              <div className="col two">
-                  <h4>
-                    Welcome to KevTech <br /> 
-                    Tomorrow's Software, Today's Innovation
-                  </h4>
-                  <p>----------------------------------------</p>
-                  <p>HEROS v 1.0.0</p>
-                  <p>(c)2022 591 Industries</p>
-                  <p>- Server 591 -</p>
-              </div>
-              </header>
-
-              <nav className="site clear">
-              <ul>
-                  <li><a href="#" title="">Return Home</a></li>
-                  <li><a href="#" title="">Our Clients</a></li>
-                  <li><a href="#" title="">Contact Us</a></li>
-              </ul>
-              </nav>
-
-              <p>System Administrator Integrated Message System (SAIMS)</p>
-              <p>System Administrator (SYSADM) - Mack Richardson</p>
-
-              <p className="clear"><br /></p>
-
-              <p>Welcome to the System Administrator Integrated Message System (SAIMS). Fill out the fields below and press the SUBMIT button. The system administrator (SYSADM) will respond to your query after an appropriate amount of quiet contemplation. Thank you for contacting the System Administrator's Office.</p><br />
-
-              <form>
-                <label>Name</label><input type="text" /><br />
-                <label>Email</label><input type="text" /><br />
-                <label>Subject</label><input type="text" /><br />
-                <label>Message</label><textarea id="text"></textarea><br /><br /><br />
-                <input type="submit" value="Submit" />
-                <a className="button" href="index.html">Cancel</a>
-              </form>
-            </div>
-          </div>
-        </div>
+      <div>
+        <TypeAnimation
+          style={{ whiteSpace: 'pre-line', display: 'block' }}
+          sequence={[`COMPANY OVERVIEW`]}
+          speed={60}
+          className='mt-3 text-xl underline'
+          cursor={false}
+        />
+        <TypeAnimation
+          style={{ whiteSpace: 'pre-line', display: 'block' }}
+          sequence={[`KevTech is a trailblazing entity, renowned for pioneering advancements in immersive entertainment and cutting-edge technology solutions. With a prestigious portfolio that includes ventures like AREA15, Strategy9, and J Taylor Education, we excel in crafting compelling digital experiences and optimizing infrastructure for diverse industries.`]}
+          speed={90}
+          className='text-lg text-justify'
+          cursor={false}
+        />
+        <TypeAnimation
+          style={{ whiteSpace: 'pre-line', display: 'block' }}
+          sequence={[`MISSION STATEMENT`]}
+          speed={60}
+          className='mt-3 text-xl underline'
+          cursor={false}
+        />
+        <TypeAnimation
+          style={{ whiteSpace: 'pre-line', display: 'block' }}
+          sequence={[`At KevTech, we specialize in harnessing the power of modern web technologies to create innovative solutions that push the boundaries of possibility. From developing interactive games and virtual reality experiences to building robust web applications and optimizing educational platforms, we bring strategic innovation to every project.`]}
+          speed={90}
+          className='text-lg text-justify'
+          cursor={false}
+        />
+      </div>
     )
 }
 

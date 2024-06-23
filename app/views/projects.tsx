@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react';
+import { ViewProps } from '../types/types';
 
-const Projects = () => {
+const Projects: FC<ViewProps> = ({ view, setView }) => {
     return(
         <div>
             

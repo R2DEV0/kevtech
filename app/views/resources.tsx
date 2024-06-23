@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react';
+import { ViewProps } from '../types/types';
 
-const Resources = () => {
+const Resources: FC<ViewProps> = ({ view, setView }) => {
     return(
         <div>
             

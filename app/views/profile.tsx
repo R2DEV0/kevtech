@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react';
+import { ViewProps } from '../types/types';
 
-const Profile = () => {
+const Profile: FC<ViewProps> = ({ view, setView }) => {
     return(
         <div>
             

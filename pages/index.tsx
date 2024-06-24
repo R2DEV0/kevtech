@@ -1,4 +1,3 @@
-// pages/home.tsx
 "use client";
 import React, { useState, FC } from 'react';
 import { views } from './components/views';

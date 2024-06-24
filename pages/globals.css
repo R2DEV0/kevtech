@@ -67,10 +67,9 @@ body {
 	color: #00dd00;
 	font-size: 64.5%;
 	font-size: 1.4em;
-	font-family: 'VT323', Courier;
 	height: 100%;
 	margin: 0;
-	padding: 15px;
+	padding: 30px;
 }
 
 h1, h2, h3 h4, h5, h6 { 
@@ -107,7 +106,6 @@ p {
 		opacity: 1;
 	}
 }
-  
 
 header.site {
 	text-transform: uppercase;
@@ -218,9 +216,14 @@ header.site {
 }
 
 .nav-links a {
+	z-index: 10;
 	color: #02aa02c5;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.social svg:hover{
+	color: #00dd00;
 }
 
 .nav-links a:hover {

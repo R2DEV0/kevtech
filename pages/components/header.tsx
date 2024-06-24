@@ -22,10 +22,10 @@ const Header: FC<ViewProps> = ({ view, setView }) => {
         </div>
         <p>----------------------------------------</p>
         <nav className="nav-links text-lg">
-          <a onClick={() => setView(0)}><span className={view === 0 ? 'flash' : ''}>Home</span></a>
-          <a onClick={() => setView(3)}><span className={view === 3 ? 'flash' : ''}>Projects</span></a>
-          <a onClick={() => setView(4)}><span className={view === 4 ? 'flash' : ''}>Contact</span></a>
-          <a onClick={() => setView(2)}><span className={view === 2 ? 'flash' : ''}>Resume</span></a>
+          <a onClick={() => setView(0)}><span className={view === 0 ? 'flash' : ''}>HOME</span></a>
+          <a onClick={() => setView(3)}><span className={view === 3 ? 'flash' : ''}>PROJECTS</span></a>
+          <a onClick={() => setView(4)}><span className={view === 4 ? 'flash' : ''}>CONTACT</span></a>
+          <a onClick={() => setView(2)}><span className={view === 2 ? 'flash' : ''}>RESUME</span></a>
         </nav>
       </div>
     </header>

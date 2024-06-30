@@ -2,6 +2,7 @@
 import React, { useState, FC } from 'react';
 import { views } from './components/views';
 import Header from './components/header';
+import Chat from './components/chat';
 
 const Home: FC = () => {
   const [view, setView] = useState<number>(0);
@@ -16,6 +17,7 @@ const Home: FC = () => {
           <Header view={view} setView={setView} />
           <CurrentView view={view} setView={setView} />
         </div>
+        <Chat />
       </div>
     </main>
   );

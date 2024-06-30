@@ -1,20 +1,7 @@
 import React, { FC, useEffect } from 'react';
 import { ViewProps } from '../types/types';
-import axios from 'axios';
 
 const Resume: FC<ViewProps> = ({ view, setView }) => {
-
-  useEffect(() => {
-    const MakeCall = async () => {
-      const res = await axios.post('/api/openai', {input: "what are you?"});
-      if(res.data.statusCode === 200){
-        console.log(res.data);
-      } else {
-        console.log(res.data);
-      }
-    }
-    MakeCall();
-  })
 
     return(
         <div className="mx-auto my-8">

@@ -69,7 +69,7 @@ body {
 	font-size: 1.4em;
 	height: 100%;
 	margin: 0;
-	padding: 30px;
+	padding: 15px;
 }
 
 h1, h2, h3 h4, h5, h6 { 
@@ -244,4 +244,71 @@ header.site {
 	.nav-links {
 		flex-direction: column;
 	}
+}
+
+.chat{
+	border: 2px solid #00dd00;
+	background-color: #101010;
+	padding: 10px;
+	transition: ease .2s;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 999;
+}
+
+.chat-sec {
+    max-height: 300px;
+	height: 100%;
+    overflow-y: auto !important;
+    width: 100%;
+}
+
+.submit-button{
+	background-color: #00dd00;
+	color: #101010;
+	font-weight: 700;
+	padding: 5px 20px;
+	font-size: 18px;
+}
+
+.close-chat{
+	background-color: #00dd00;
+	color: #101010;
+	font-weight: 700;
+	padding: 5px 20px;
+	font-size: 18px;
+}
+
+.input-sec {
+    height: 150px; /* Fixed height for input section */
+    width: 100%;
+}
+
+.chat-box{
+	background-color: #2e2e2e;
+	font-size: 16px !important;
+}
+
+.open-chat-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-open{
+	height: 450px;
+	width: 325px;
+}
+
+.chat-input{
+	height: 40px;
+	color: #101010;
+	font-size: 18px;
+	padding: 3px;
+}
+
+.chat-closed{
+	height: 70px;
+	width: 70px;
 }

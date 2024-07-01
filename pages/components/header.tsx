@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { ViewProps } from '../types/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faFileImage } from '@fortawesome/free-solid-svg-icons';
 
 const Header: FC<ViewProps> = ({ view, setView }) => {
   return (
@@ -14,19 +14,16 @@ const Header: FC<ViewProps> = ({ view, setView }) => {
             {/* Tomorrow's Software, Today's Innovation */}
             Pioneering the Future of Software Today
           </h4>
-          <div className='social w-full lg:w-1/4 flex justify-end space-x-3'>
+          <div className='social w-full lg:w-1/4 flex justify-end space-x-3 mt-2'>
             <FontAwesomeIcon icon={faLinkedin} />
             <FontAwesomeIcon icon={faGithub} />
             <FontAwesomeIcon icon={faEnvelope} />
           </div>
         </div>
         <p>----------------------------------------</p>
-        <nav className="nav-links text-lg">
-          <a onClick={() => setView(0)}><span className={view === 0 ? 'flash' : ''}>HOME</span></a>
-          <a onClick={() => setView(3)}><span className={view === 3 ? 'flash' : ''}>PROJECTS</span></a>
-          <a onClick={() => setView(4)}><span className={view === 4 ? 'flash' : ''}>CONTACT</span></a>
-          <a onClick={() => setView(2)}><span className={view === 2 ? 'flash' : ''}>RESUME</span></a>
-        </nav>
+        { view !== 0 &&
+          <h3 className='clickable' onClick={() => setView(0)}>{`<<BACK`}</h3>
+        }
       </div>
     </header>
   );

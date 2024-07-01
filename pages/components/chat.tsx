@@ -11,17 +11,17 @@ interface ChatMessage {
 const Chat: FC = () => {
     const [chatOpen, setChatOpen] = useState<boolean>(false);
     const [prompt, setPrompt] = useState<string>("");
-    const [chatHistory, setChatHistory] = useState<ChatMessage[]>([]);
+    const [chatHistory, setChatHistory] = useState<ChatMessage[]>([{sender: "Kevbot", message: "Hello, I am the Kevbot3000. How may I help you today?"}]);
     const chatEndRef = useRef<HTMLDivElement>(null);
 
     const MakeCall = async () => {
         setChatHistory(p => [...p, { 'sender': 'You', 'message': prompt }]);
         const res = await axios.post('/api/openai', {input: prompt});
         if(res.data.statusCode === 200){
-            setChatHistory(p => [...p, { 'sender': 'Chatbot', 'message': res.data.data }]);
+            setChatHistory(p => [...p, { 'sender': 'Kevbot', 'message': res.data.data }]);
             setPrompt("");
         } else {
-            setChatHistory(p => [...p, { 'sender': 'Chatbot', 'message': 'Something went wrong. Please try again.' }]);
+            setChatHistory(p => [...p, { 'sender': 'Kevbot', 'message': 'Something went wrong. Please try again.' }]);
         }
     }
 
@@ -35,7 +35,7 @@ const Chat: FC = () => {
         <div className={`chat ${chatOpen ? 'chat-open' : 'chat-closed'}`} onClick={() => { !chatOpen && setChatOpen(true)}}>
             { chatOpen ?
                 <div className='open-chat-body'>
-                    <div className='chat-sec flex flex-col justify-center items-center'>
+                    <div className='chat-sec flex flex-col justify-start items-center'>
                         <div>
                             { chatHistory.map((chat, i) => {
                                 return(
